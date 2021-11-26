@@ -1,7 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateComponent } from './usuarios/create/create.component';
+import { EditComponent } from './usuarios/edit/edit.component';
+import { GetComponent } from './usuarios/get/get.component';
+//se agregan los enrutamientos
+const routes: Routes =
+ [
+  {
+    path: 'create',
+    component: CreateComponent,
+  },{
+    path: 'edit',
+    component: EditComponent,
+  },{
+    path: 'get',
+    component: GetComponent,
+  },{
+    path: '',
+    redirectTo: 'get'
+  }
 
-const routes: Routes = [];
+ ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
