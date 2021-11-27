@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
 import { CambiarSesionComponent } from './cambiar-sesion/cambiar-sesion.component';
 import { RecuperarSesionComponent } from './recuperar-sesion/recuperar-sesion.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { RecuperarSesionComponent } from './recuperar-sesion/recuperar-sesion.co
   ],
   imports: [
     CommonModule,
-    SeguridadRoutingModule
+    SeguridadRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SeguridadModule { }

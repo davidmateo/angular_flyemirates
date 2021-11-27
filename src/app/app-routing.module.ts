@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   //metodos pere
   //si el path es aeropuertos el padre me mandara a donde su hijo aeropuertos para que el
-  //me de muestre lo que le que solicite
+  //me muestre lo que le que solicite
   {
     path: 'aeropuertos',
     loadChildren: () => import('./modulos/aeropuertos/aeropuertos.module').then(m => m.AeropuertosModule)
