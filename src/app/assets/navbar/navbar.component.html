@@ -1,19 +1,24 @@
 
   <nav>
-    <div class="nav-wrapper dimentions  red accent-3">
+    <div class="nav-wrapper dimentions  red accent-3 ">
       <ul>
         <li><i class="large material-icons">local_airport</i></li>
         <li> <a href="#" class="brand-logo"><h4>Fly emirates</h4></a> </li>
       </ul>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <!--Usamoa "routerlink" para ir a un componente-->
-        <li><a routerLink="aeropuertos/get"><h5>Aeropuertos</h5></a></li>
-        <li><a routerLink="estaciones/get"><h5>Estaciones</h5></a></li>
-        <li><a routerLink="vuelos/get"><h5>Vuelos</h5></a></li>
-        <li><a routerLink="rutas/get"><h5>Rutas</h5></a></li>
-        <li ><a routerLink="admin/get" ><h5>Administrador</h5></a></li>
+        <!--Usamos "routerlink" para ir a un componente-->
+        <!--se le agrega el condicional por medio de ngif-->
+        <!--estos condicionales solo me permitiran iniciarsesion solo cuando necesite iniciar ses
+        sesion o cuando necesite cerrar sesion-->
         <li><i class="medium material-icons">person_pin</i></li>
-        <li><a routerLink="seguridad/login"><h5>Login</h5></a></li>
+        <li *ngIf="!activeSession"><a routerLink="/seguridad/login"><h5>Login</h5></a></li>
+        <li *ngIf="activeSession"><a routerLink="/seguridad/logout"><h5>Cerrar Sesion</h5></a></li>
+        <li><a routerLink="aeropuertos/get"><h6>Aeropuertos</h6></a></li>
+        <li><a routerLink="estaciones/get"><h6>Estaciones</h6></a></li>
+        <li><a routerLink="vuelos/get"><h6>Vuelos</h6></a></li>
+        <li><a routerLink="rutas/get"><h6>Rutas</h6></a></li>
+        <li ><a routerLink="admin/get" ><h6>Administrador</h6></a></li>
+
       </ul>
     </div>
   </nav>
