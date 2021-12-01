@@ -31,12 +31,15 @@ export class LoginComponent implements OnInit {
         this.seguridadService.almacenarSesion(data)
         //el router.navigate me permite mover dentro componentes
         //sweetalert me permite crear alertas creativas para mi paginita
-        Swal.fire(
-          'Good job!',
-          'You just logged in',
-          'success'
-        )
-        this.router.navigate(['/index']);
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Bienvenido',
+          showConfirmButton: false,
+          timer: 1500
+        }).then(() =>{
+          this.router.navigate(['/index']);
+        })
       },
       (error: any) => {
         console.log(error)
@@ -44,7 +47,7 @@ export class LoginComponent implements OnInit {
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
-          text: 'Something went wrong!',
+          text: '¡Algo salio mal!',
         })
       } 
       );

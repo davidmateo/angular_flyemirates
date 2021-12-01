@@ -19,6 +19,7 @@ export class NavbarComponent implements OnInit {
         this.activeSession = data.isLoggedIn;
     })
 
+
   }
 
 }
