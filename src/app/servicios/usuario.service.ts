@@ -17,7 +17,8 @@ export class UsuarioService {
   //this.token = this.seguridadService.getToken(); 
   constructor
   (private http: HttpClient,  private seguridadService: SeguridadService) 
-    { this.token = this.seguridadService.getToken(); }
+    { this.token = this.seguridadService.getToken();
+    console.log(this.token) }
     //Debajo del constructor agregamos las variables globales de la clase:
     url = "http://localhost:3000"
     token: string = ''
@@ -27,7 +28,7 @@ export class UsuarioService {
   store(usuario: UsuarioModelo): Observable<UsuarioModelo> {
     return this.http.post<UsuarioModelo>(`${this.url}/usuarios`, {
         nombre: usuario.nombre,
-        apellidos: usuario.apellidos,
+        apellido: usuario.apellidos,
         telefono: usuario.telefono,
         correo: usuario.correo
       });
@@ -44,7 +45,7 @@ export class UsuarioService {
   update(usuario: UsuarioModelo): Observable<UsuarioModelo> {
       return this.http.patch<UsuarioModelo>(`${this.url}/usuarios/${usuario.id}`, {
         nombre: usuario.nombre,
-        apellidos: usuario.apellidos,
+        apellido: usuario.apellidos,
         telefono: usuario.telefono,
         correo: usuario.correo
       }, {
