@@ -20,8 +20,8 @@ export class EditComponent implements OnInit {
       id: ['', [Validators.required]],
       nombre: ['', [Validators.required]],
       apellidos: ['', [Validators.required]],
-      telefono: ['', [Validators.required]],
-      correo: ['', [Validators.required, Validators.email]],
+      telefono: [{value:'',disabled:true}, [Validators.required]],
+      correo: [{value:'',disabled:true}, [Validators.required, Validators.email]],
     });
  
     id: string=''
@@ -53,7 +53,7 @@ export class EditComponent implements OnInit {
       })
     }
   
-  //cuando inicia el componente se va a capturar el id 
+  //cuando inicia el componente se va a capturar el id
   ngOnInit(): void {
 
     this.id = this.route.snapshot.params["id"]
