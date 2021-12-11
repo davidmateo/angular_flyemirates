@@ -1,6 +1,6 @@
 <div class="container">
     <br>
-    <a routerLink="/vuelos/create" class="btn">Registrar Vuelo</a>
+    <a routerLink="/vuelos/create" class="btn"><i class="material-icons">local_airport</i>Registrar Vuelo</a>
    
     <table class="table responsive">
       <thead>
@@ -26,8 +26,8 @@
           <td>{{p.vendidos}}</td>
           <td>{{p.nombre_piloto}}</td>
           <td>{{p.ruta}}</td>
-            <a routerLink="/vuelos/edit/{{p.id}}" class="btn">Editar</a>
-            <button class="btn red" (click)="delete(p.id)">Eliminar</button>
+            <a routerLink="/vuelos/edit/{{p.id}}" class="btn"><i class="material-icons">edit</i>Editar</a>
+            <button class="btn red" (click)="delete(p.id)"><i class="material-icons">delete</i>borrar</button>
         </tr>
       </tbody>
     </table>
