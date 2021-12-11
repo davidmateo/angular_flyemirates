@@ -30,11 +30,7 @@ const routes: Routes = [
   },{
     path: 'admin',
     loadChildren: () => import('./modulos/admin/admin.module').then(m => m.AdminModule)
-  },{
-    path: 'estaciones',
-    loadChildren: () => import('./modulos/estaciones/estaciones.module').then(m => m.EstacionesModule)
   },
-
   {
     path: '',
     pathMatch: 'full',
@@ -51,7 +47,8 @@ const routes: Routes = [
 ];
  
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes,{useHash:true})],
+  exports: [RouterModule],
+  
 })
 export class AppRoutingModule { }

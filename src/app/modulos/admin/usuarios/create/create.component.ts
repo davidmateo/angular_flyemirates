@@ -36,7 +36,7 @@ export class CreateComponent implements OnInit {
  
     this.usuarioService.store(usuario).subscribe((data: UsuarioModelo)=> {
       Swal.fire('Creado correctamente!', '', 'success')
-      this.router.navigate(['/admin/get']);
+      this.router.navigate(['/index/']);
     },
     (error: any) => {
       console.log(error)

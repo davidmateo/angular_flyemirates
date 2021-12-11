@@ -20,7 +20,7 @@ export class UsuarioService {
     { this.token = this.seguridadService.getToken();
     console.log(this.token) }
     //Debajo del constructor agregamos las variables globales de la clase:
-    url = "http://localhost:3000"
+    url = "https://apilpteam5misiontic.herokuapp.com/"
     token: string = ''
     //Implementamos los métodos necesarios para realizar las acciones del CRUD,
     // debajo del constructor

@@ -15,10 +15,11 @@ const routes: Routes =
     canActivate: [SessionGuard],
     path: 'edit/:id',
     component: EditComponent,
-  },/*{
-   // path: 'get',
+  },{
+    canActivate: [SessionGuard],
+    path: 'get',
     component: GetComponent,
-  },*/{
+  },{
     canActivate: [SessionGuard],
     path: '',
     redirectTo: 'get'

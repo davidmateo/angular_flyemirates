@@ -3,8 +3,8 @@ export class aeropuertoModelo{
     nombre?: String;
     ciudad?: string;
     pais?: string;
-    coordx?: string;
-    coordy?: string;
+    coord_x?: string;
+    coord_y?: string;
     siglas?: string;
     tipo?: string;
   }

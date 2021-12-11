@@ -7,7 +7,7 @@ import { UsuarioModelo } from '../modelos/usuario.model';
   providedIn: 'root'
 })
 export class SeguridadService {
-  url = "http://localhost:3000";
+  url = "https://apilpteam5misiontic.herokuapp.com/";
   //lo que se encuentra en un constructor se ejecuta primero en el programa
   sessionUserData = new BehaviorSubject<UsuarioModelo>(new UsuarioModelo());
   constructor(private http: HttpClient) {  this.verificarSesion();}
